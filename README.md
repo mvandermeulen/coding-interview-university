@@ -59,21 +59,6 @@
     <p>
         <a href="https://github.com/sponsors/jwasham"><strong>Become a sponsor</strong> and support Coding Interview University!</a>
     </p>
-    <p>
-        <strong>Special thanks to:</strong>
-    </p>
-    <div>
-        <a href="https://meetapro.com/?utm_source=ciusponsor">
-            <div>
-                <img src="https://d3j2pkmjtin6ou.cloudfront.net/sponsors/meetapro.jpg" width="414" alt="Meetapro">
-            </div>
-            <div>
-                <sup>Feeling anxious about your upcoming interviews? Want to outdo Google's notoriously low 0.2% acceptance rate? Look no further than Meetapro! 
-                Our Airbnb-style setup connects you with expert interviewers from FAANG and other industry giants. Their personalized feedback and tips are pure gold, 
-                and they can double your chances of landing your dream job. Sign up for Meetapro today and take your career to the next level!</sup>
-            </div>
-        </a>
-    </div>
     <hr />
 </div>
 
@@ -262,21 +247,19 @@ Create a new branch so you can check items like this, just put an x in the brack
 1. Clone to your local repo:
 
     ```
-    git clone git@github.com:<your_github_username>/coding-interview-university.git
+    git clone https://github.com/<YOUR_GITHUB_USERNAME>/coding-interview-university.git
     cd coding-interview-university
-    git checkout -b progress
-    git remote add jwasham https://github.com/jwasham/coding-interview-university
-    git fetch --all
+    git remote add upstream https://github.com/jwasham/coding-interview-university.git
+    git remote set-url --push upstream DISABLE  # so that you don't push your personal progress back to the original repo
     ```
 
 1. Mark all boxes with X after you completed your changes:
 
     ```
-    git add .
-    git commit -m "Marked x"
-    git rebase jwasham/main
-    git push --set-upstream origin progress
-    git push --force
+    git commit -am "Marked personal progress"
+    git pull upstream main  # keep your fork up-to-date with changes from the original repo
+   
+    git push # just pushes to your fork
     ```
 
 ## Don't feel you aren't smart enough
@@ -1261,7 +1244,7 @@ Mock Interviews:
 - [Gainlo.co: Mock interviewers from big companies](http://www.gainlo.co/#!/) - I used this and it helped me relax for the phone screen and on-site interview
 - [Pramp: Mock interviews from/with peers](https://www.pramp.com/) - peer-to-peer model of practice interviews
 - [interviewing.io: Practice mock interview with senior engineers](https://interviewing.io) - anonymous algorithmic/systems design interviews with senior engineers from FAANG anonymously
-- [Meetapro: Mock interviews with top FAANG interviewers](https://meetapro.com/?utm_source=ciusponsor) - an Airbnb-style mock interview/coaching platform.
+- [Meetapro: Mock interviews with top FAANG interviewers](https://meetapro.com/?utm_source=ciu) - an Airbnb-style mock interview/coaching platform.
 
 ## Be thinking of for when the interview comes
 
